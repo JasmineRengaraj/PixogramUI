@@ -18,22 +18,40 @@
     </div>
   </mat-toolbar-row>
 </mat-toolbar>
+<div class="header"> <span style="font: bold important;">New Media page</span></div>
 <div style="text-align:center; margin-top: 100px; ">
+
+
+  <input type="file" #fileUpload id="fileUpload" name="fileUpload" multiple="multiple" accept="image/*" style="display:none;" />
+<mat-form-field class="example-full-width" appearance="fill">
+  <mat-label>Title</mat-label>
+  <input matInput >
+</mat-form-field> <br/>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Description</mat-label>
+    <input matInput >
+  </mat-form-field><br/>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Tags</mat-label>
+    <input matInput >
+  </mat-form-field>
+
   <mat-card class="upload-card" >
-  <mat-card-content style="width: 100%; " >
-    <ul>
-      <li *ngFor="let file of files">
-        <mat-progress-bar [value]="file.progress"></mat-progress-bar>
-        <span id="file-label">
+    <mat-card-content style="width: 100%; " >
+      <ul>
+        <li *ngFor="let file of files">
+          <mat-progress-bar [value]="file.progress"></mat-progress-bar>
+          <span id="file-label">
  <mat-card-title>{{file.data.name}}</mat-card-title>
                     </span>
-      </li>
-    </ul>
-  </mat-card-content>
-  <mat-card-actions>
-    <button class="uploadbutton" mat-button color="warn" (click)="onClick()">
-      <mat-icon>file_upload</mat-icon>
-      Upload
-    </button>
-  </mat-card-actions>
-</mat-card><input type="file" #fileUpload id="fileUpload" name="fileUpload" multiple="multiple" accept="image/*" style="display:none;" /></div>
+        </li>
+      </ul>
+    </mat-card-content>
+    <mat-card-actions>
+      <button class="uploadbutton" mat-raised-button color="accent"  (click)="onClick()">
+        <mat-icon>file_upload</mat-icon>
+        Upload
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

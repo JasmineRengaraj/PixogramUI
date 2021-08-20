@@ -1,12 +1,11 @@
 .header{
   background-image: linear-gradient(to bottom right, lightgreen, yellow);
-
   margin:4px;
   text-align: center;
  font-size: 18px;
  padding: 5px;
-
 }
+
 .container-flex{
 flex-direction: row
 }

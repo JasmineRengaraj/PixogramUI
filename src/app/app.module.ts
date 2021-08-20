@@ -18,6 +18,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatRadioModule} from '@angular/material/radio';
 import { LoginComponent } from './login/login.component';
 import {FormsModule} from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
@@ -58,6 +59,7 @@ import { MediadetailComponent } from './mediadetail/mediadetail.component';
     MatSnackBarModule,
     MatCarouselModule.forRoot(),
     MatTabsModule,
+    MatRadioModule,
     HttpClientModule
   ],
   exports: [

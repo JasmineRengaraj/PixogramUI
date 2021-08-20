@@ -1,9 +1,21 @@
 <mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <span>Upload Media</span>
-    <span style="text-align:right;width: 1500px;">
-      <a routerLink="/mymedia" routerLinkActive="active" style="text-align:right ;color:white;text-decoration: none;">MyMedia</a></span>
-
+  <mat-toolbar-row align="center">
+    <div> <mat-icon>face</mat-icon></div>
+    <div> {{this.username}}</div>
+    <div style="width:400px;"></div>
+    <div class="example-button-row">
+      <a mat-raised-button color="accent"  target="_blank">Upload Media</a>
+    </div>
+    <div class="example-button-row">
+      <a mat-stroked-button routerLink="/mymedia" >My Media</a>
+    </div>
+    <div class="example-button-row">
+      <a mat-stroked-button  target="_blank">Followers/Following</a>
+    </div>
+    <div style="width:650px;"></div>
+    <div class="example-button-row">
+      <a mat-stroked-button  target="_blank">Account</a>
+    </div>
   </mat-toolbar-row>
 </mat-toolbar>
 <div style="text-align:center; margin-top: 100px; ">

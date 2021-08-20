@@ -22,8 +22,9 @@ password: string='';
 
 
  login() : void {
+     this.globals.username=this.username;
      let httpHeaders = new HttpHeaders({'Content-Type' : 'application/json','Cache-Control': 'no-cache','Access-Control-Allow-Origin' :'*'});
-       let options = {headers: httpHeaders};
+     let options = {headers: httpHeaders};
          this.httpObj.post("http://localhost:8086/authenticate",
          {
            "username" : this.username,

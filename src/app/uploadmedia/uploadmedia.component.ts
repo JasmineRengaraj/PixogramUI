@@ -3,6 +3,7 @@ import { HttpEventType, HttpErrorResponse } from '@angular/common/http';
 import { of } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import { FileUploadService } from '../file-upload.service';
+import { GlobalsService } from '../globals.service';
 
 
 
@@ -12,10 +13,10 @@ import { FileUploadService } from '../file-upload.service';
   styleUrls: ['./uploadmedia.component.css']
 })
 export class UploadmediaComponent  {
-
+  public username: string = this.globals.username;
  @ViewChild("fileUpload", {static: false}) fileUpload: ElementRef;files  = [];
  // Inject service
- constructor(private uploadService: FileUploadService) { }
+ constructor(private uploadService: FileUploadService,private globals: GlobalsService) { }
  ngOnInit(): void {  }
 
  uploadFile(file) {

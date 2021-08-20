@@ -1,9 +1,21 @@
 <mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <span>My Media</span>
-    <span style="text-align:right;width: 1500px;">
-      <a routerLink="/uploadmedia" routerLinkActive="active" style="text-align:right ;color:white;text-decoration: none;">UploadMedia</a></span>
-
+  <mat-toolbar-row align="center">
+    <div> <mat-icon>face</mat-icon></div>
+    <div> {{this.username}}</div>
+    <div style="width:400px;"></div>
+      <div class="example-button-row">
+            <a mat-stroked-button routerLink="/uploadmedia"  >Upload Media</a>
+      </div>
+    <div class="example-button-row">
+      <a mat-raised-button color="accent"  target="_blank">My Media</a>
+    </div>
+    <div class="example-button-row">
+      <a mat-stroked-button  target="_blank">Followers/Following</a>
+    </div>
+    <div style="width:650px;"></div>
+    <div class="example-button-row">
+      <a mat-stroked-button  target="_blank">Account</a>
+    </div>
   </mat-toolbar-row>
 </mat-toolbar>
 <br/>
@@ -18,9 +30,9 @@
         <img class="card-img-top" src="{{m.mediaurl}}" alt="Card image cap" width="250" height="250"/>
       </mat-card-content>
       <mat-card-actions>
-        <mat-icon>thumb_up</mat-icon>
+        <mat-icon>favorite</mat-icon>2
         <mat-icon>share</mat-icon>
-        <mat-icon> comment</mat-icon>
+        <mat-icon> comment</mat-icon>17
 
 
       </mat-card-actions>

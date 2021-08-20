@@ -8,10 +8,14 @@ export class GlobalsService {
   constructor() { }
 
   public jwttoken: string=null;
+  public username: string=null;
 
   setToken(token:string){
       this.jwttoken = token;
         }
+  setUsername(username:string){
+      this.username = username;
+         }
 }
 
 

@@ -11,16 +11,11 @@ import { MatCarousel, MatCarouselComponent } from '@ngmodule/material-carousel';
 
 
 export class MymediaComponent implements OnInit {
-slides = [
-      {'image': 'https://res.cloudinary.com/demo/image/upload/v1312461204/sample.jpg'},
-      {'image': 'https://res.cloudinary.com/demo/image/upload/v1312461204/sample.jpg'},
-      {'image': 'https://res.cloudinary.com/demo/image/upload/v1312461204/sample.jpg'},
-      {'image': 'https://res.cloudinary.com/demo/image/upload/v1312461204/sample.jpg'},
-      {'image': 'https://res.cloudinary.com/demo/image/upload/v1312461204/sample.jpg'}
-    ];
+
 // API url
   SERVER_URL = "http://localhost:8086/media/user/1"
   public jwttoken: string = 'Bearer '+ this.globals.jwttoken;
+   public username: string = this.globals.username;
    media: any = [];
   constructor(private httpClient: HttpClient,private globals: GlobalsService) { }
 

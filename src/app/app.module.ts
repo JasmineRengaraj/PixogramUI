@@ -17,6 +17,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
+import {MatTabsModule} from '@angular/material/tabs';
 import { LoginComponent } from './login/login.component';
 import {FormsModule} from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
@@ -24,6 +25,7 @@ import { MymediaComponent } from './mymedia/mymedia.component';
 import { UploadmediaComponent } from './uploadmedia/uploadmedia.component';
 import { DialogConfirmComponent } from './dialog-confirm/dialog-confirm.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MediadetailComponent } from './mediadetail/mediadetail.component';
 
 
 @NgModule({
@@ -33,7 +35,8 @@ import { HttpClientModule } from '@angular/common/http';
     RegisterComponent,
     MymediaComponent,
     UploadmediaComponent,
-    DialogConfirmComponent
+    DialogConfirmComponent,
+    MediadetailComponent
   ],
   imports: [
     FormsModule,
@@ -54,6 +57,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatGridListModule,
     MatSnackBarModule,
     MatCarouselModule.forRoot(),
+    MatTabsModule,
     HttpClientModule
   ],
   exports: [

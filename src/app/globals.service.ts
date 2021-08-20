@@ -9,6 +9,7 @@ export class GlobalsService {
 
   public jwttoken: string=null;
   public username: string=null;
+  public media: any=null;
 
   setToken(token:string){
       this.jwttoken = token;
@@ -16,6 +17,9 @@ export class GlobalsService {
   setUsername(username:string){
       this.username = username;
          }
+  setMedia(media:any){
+        this.media = media;
+           }
 }
 
 

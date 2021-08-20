@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GlobalsService } from '../globals.service';
 
 @Component({
   selector: 'app-mediadetail',
@@ -6,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mediadetail.component.css']
 })
 export class MediadetailComponent implements OnInit {
+public username: string = this.globals.username;
+public media: any = this.globals.media;
 
-  constructor() { }
+constructor(private globals: GlobalsService) { }
 
   ngOnInit(): void {
   }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpEvent, HttpErrorResponse, HttpEventType,HttpHeaders } from  '@angular/common/http';
 import { GlobalsService } from '../globals.service';
 import { MatCarousel, MatCarouselComponent } from '@ngmodule/material-carousel';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-mymedia',
@@ -17,7 +18,7 @@ export class MymediaComponent implements OnInit {
   public jwttoken: string = 'Bearer '+ this.globals.jwttoken;
    public username: string = this.globals.username;
    media: any = [];
-  constructor(private httpClient: HttpClient,private globals: GlobalsService) { }
+  constructor(private httpClient: HttpClient,private globals: GlobalsService,private router: Router) { }
 
 
   ngOnInit(): void {
@@ -40,5 +41,10 @@ export class MymediaComponent implements OnInit {
                                }
                            });
   }
+onClick(media) {
+console.log(media);
+this.globals.media=media;
+this.router.navigate(["mediadetail"]);
+}
 
 }

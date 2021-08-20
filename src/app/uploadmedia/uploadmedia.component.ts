@@ -5,6 +5,7 @@ import { catchError, map } from 'rxjs/operators';
 import { FileUploadService } from '../file-upload.service';
 
 
+
 @Component({
   selector: 'app-uploadmedia',
   templateUrl: './uploadmedia.component.html',
@@ -19,9 +20,12 @@ export class UploadmediaComponent  {
 
  uploadFile(file) {
      const formData = new FormData();
+     console.log(file.data)
      formData.append('file', file.data);
+     formData.append('title', file.name);
+     formData.append('userId', '1');
      file.inProgress = true;
-     this.uploadService.upload(formData).pipe(
+     this.uploadService.upload(formData);/* .pipe(
        map(event => {
          switch (event.type) {
            case HttpEventType.UploadProgress:
@@ -38,7 +42,7 @@ export class UploadmediaComponent  {
          if (typeof (event) === 'object') {
            console.log(event.body);
          }
-       });
+       }); */
    }
 private uploadFiles() {
     this.fileUpload.nativeElement.value = '';

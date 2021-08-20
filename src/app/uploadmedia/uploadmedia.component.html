@@ -10,6 +10,7 @@
   <mat-card-content>
     <ul>
       <li *ngFor="let file of files">
+        {{file.fileName}}
         <mat-progress-bar [value]="file.progress"></mat-progress-bar>
         <span id="file-label">
 

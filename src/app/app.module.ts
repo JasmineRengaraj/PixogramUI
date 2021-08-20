@@ -16,6 +16,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { MatCarouselModule } from '@ngmodule/material-carousel';
 import { LoginComponent } from './login/login.component';
 import {FormsModule} from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
@@ -52,6 +53,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatProgressBarModule,
     MatGridListModule,
     MatSnackBarModule,
+    MatCarouselModule.forRoot(),
     HttpClientModule
   ],
   exports: [

@@ -25,7 +25,7 @@ export class UploadmediaComponent  {
      formData.append('title', file.name);
      formData.append('userId', '1');
      file.inProgress = true;
-     this.uploadService.upload(formData);/* .pipe(
+     this.uploadService.upload(formData).pipe(
        map(event => {
          switch (event.type) {
            case HttpEventType.UploadProgress:
@@ -42,7 +42,7 @@ export class UploadmediaComponent  {
          if (typeof (event) === 'object') {
            console.log(event.body);
          }
-       }); */
+       });
    }
 private uploadFiles() {
     this.fileUpload.nativeElement.value = '';
@@ -55,6 +55,7 @@ onClick() {
     for (let index = 0; index < fileUpload.files.length; index++)
     {
      const file = fileUpload.files[index];
+     console.log(file);
      this.files.push({ data: file, inProgress: false, progress: 0});
     }
       this.uploadFiles();

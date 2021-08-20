@@ -22,7 +22,7 @@ const httpHeaders= new HttpHeaders()
   //.set('Authorization',this.jwttoken);
    let options = {headers: httpHeaders};
 console.log(formData)
-  this.httpClient.post(this.SERVER_URL,
+  /* this.httpClient.post(this.SERVER_URL,
            formData,options).subscribe({
                              next: data => {
                                 console.log(data)
@@ -31,13 +31,13 @@ console.log(formData)
                                 console.error('There was an error!', error);
                                 alert("Invalid File")
                              }
-                         });
+                         }); */
 
-  	/*  return this.httpClient.post<any>(this.SERVER_URL, formData, {
+  	  return this.httpClient.post<any>(this.SERVER_URL, formData, {
        reportProgress: true,
        observe: 'events'
 
-     }); */
+     });
  }
 
 

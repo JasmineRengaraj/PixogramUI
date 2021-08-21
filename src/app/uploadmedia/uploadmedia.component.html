@@ -25,19 +25,19 @@
   <input type="file" #fileUpload id="fileUpload" name="fileUpload" multiple="multiple" accept="image/*" style="display:none;" />
 <mat-form-field class="example-full-width" appearance="fill">
   <mat-label>Title</mat-label>
-  <input matInput >
+  <input matInput [(ngModel)]="title">
 </mat-form-field> <br/>
   <mat-form-field class="example-full-width" appearance="fill">
     <mat-label>Description</mat-label>
-    <input matInput >
+    <input matInput [(ngModel)]="desc">
   </mat-form-field><br/>
   <mat-form-field class="example-full-width" appearance="fill">
     <mat-label>Tags</mat-label>
-    <input matInput >
+    <input matInput [(ngModel)]="tags">
   </mat-form-field>
   <br><br>
 
-  <mat-radio-group aria-label="Effects">
+  <mat-radio-group aria-label="Effects" [(ngModel)]="effect">
     <mat-radio-button value="1">Sepia</mat-radio-button>
     <mat-radio-button value="2">Grey</mat-radio-button>
     <mat-radio-button value="2">Brightness</mat-radio-button>

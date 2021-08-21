@@ -33,19 +33,26 @@
 </mat-card>
   </td>
   <td style="width:100px;"></td>
-  <td style="width:400px;">
-  <div class="desc">
-    <span style="color: blue">Effect:</span> Sepia <br><br>
+  <td >
+    <mat-card class="my-card" style="width:400px;height:600px;  background-image: linear-gradient(to bottom right, lightgreen, yellow);" >
 
+      <mat-card-content >
 
+        <div class="desc">
+          <span ><b>Effect:</b></span> {{media.effect}} <br><br><br>
+          <span ><b>Description:</b></span> {{media.description}} <br><br><br>
+          <span ><b>Tags:</b></span> {{media.tags}} <br><br><br>
+          <span ><b>Comments:</b></span><br>
 
-    <br>
+          <div class="comment">Awesome click!</div> <br>
+          <div class="comment">Beautiful picture. Like it a lot.</div> <br>
+          <div class="comment">Which place is this?</div> <br>
 
-    <span style="color: blue">Comments:</span><br>
-    <div class="comment">Awesome click!</div> <br>
-    <div class="comment">Beautiful picture. Like it a lot.</div> <br>
-    <div class="comment">Which place is this?</div> <br>
+        </div>
 
-  </div>
+      </mat-card-content  >
+
+    </mat-card>
+
 </td>
 </tr></table>

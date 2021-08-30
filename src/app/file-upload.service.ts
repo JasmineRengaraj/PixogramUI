@@ -9,7 +9,7 @@ import { GlobalsService } from './globals.service';
 export class FileUploadService {
 
   // API url
-  SERVER_URL = "http://localhost:8086/media/singlefileupload/user/1"
+  SERVER_URL = "http://localhost:8086/media/singlefileupload/user/"+ this.globals.jwttoken;
 
  constructor(private httpClient: HttpClient,private globals: GlobalsService) { }
  public jwttoken: string = 'Bearer '+ this.globals.jwttoken;

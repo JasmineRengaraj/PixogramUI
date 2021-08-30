@@ -14,7 +14,7 @@ import {Router} from '@angular/router';
 export class MymediaComponent implements OnInit {
 
 // API url
-  SERVER_URL = "http://localhost:8086/media/user/1"
+  SERVER_URL = "http://localhost:8086/media/user/"+this.globals.jwttoken;
   public jwttoken: string = 'Bearer '+ this.globals.jwttoken;
    public username: string = this.globals.username;
    media: any = [];

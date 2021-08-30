@@ -32,10 +32,10 @@ password: string='';
          },options).subscribe({
                            next: data => {
 
-                              //this.globals.jwttoken=data.jwt
-                               //var info=JSON.parse(JSON.stringify(data));
-                               //this.globals.jwttoken = info.jwt;
-                               //console.log(this.globals.jwttoken)
+
+                               var info=JSON.parse(JSON.stringify(data));
+                               this.globals.jwttoken = info.jwt;
+                               console.log(data)
                               this.router.navigate(["mymedia"]);
                            },
                            error: error => {
